@@ -1,0 +1,12 @@
+#!/bin/sh -eu
+
+export CUDA_VISIBLE_DEVICES=0
+
+
+DS=4
+NOISE=0.1
+outdir="test"
+
+cmd="python3 ./main.py --outdir "$outdir" --dsx "$DS" --dsy "$DS" --Ns "$NOISE""
+echo $cmd
+eval $cmd
